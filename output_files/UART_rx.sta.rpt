@@ -1,0 +1,1159 @@
+Timing Analyzer report for UART_rx
+Thu Sep 01 11:16:47 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'i_board_clk'
+ 14. Slow 1200mV 85C Model Hold: 'i_board_clk'
+ 15. Slow 1200mV 85C Model Metastability Summary
+ 16. Slow 1200mV 0C Model Fmax Summary
+ 17. Slow 1200mV 0C Model Setup Summary
+ 18. Slow 1200mV 0C Model Hold Summary
+ 19. Slow 1200mV 0C Model Recovery Summary
+ 20. Slow 1200mV 0C Model Removal Summary
+ 21. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 22. Slow 1200mV 0C Model Setup: 'i_board_clk'
+ 23. Slow 1200mV 0C Model Hold: 'i_board_clk'
+ 24. Slow 1200mV 0C Model Metastability Summary
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 30. Fast 1200mV 0C Model Setup: 'i_board_clk'
+ 31. Fast 1200mV 0C Model Hold: 'i_board_clk'
+ 32. Fast 1200mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; UART_rx                                             ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE22F17C6                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.2%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; UART_rx.sdc   ; OK     ; Thu Sep 01 11:16:46 2022 ;
++---------------+--------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                   ;
++-------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; Clock Name  ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets         ;
++-------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; i_board_clk ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { i_board_clk } ;
++-------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                ;
++------------+-----------------+-------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
++------------+-----------------+-------------+------+
+; 239.52 MHz ; 239.52 MHz      ; i_board_clk ;      ;
++------------+-----------------+-------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++--------------------------------------+
+; Slow 1200mV 85C Model Setup Summary  ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; i_board_clk ; 15.825 ; 0.000         ;
++-------------+--------+---------------+
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Hold Summary  ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; i_board_clk ; 0.357 ; 0.000         ;
++-------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------------+-------+-----------------------------+
+; Clock       ; Slack ; End Point TNS               ;
++-------------+-------+-----------------------------+
+; i_board_clk ; 9.597 ; 0.000                       ;
++-------------+-------+-----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'i_board_clk'                                                                                                           ;
++--------+------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 15.825 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.089      ;
+; 15.825 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.089      ;
+; 15.825 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.089      ;
+; 15.825 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.089      ;
+; 15.825 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.089      ;
+; 15.825 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.089      ;
+; 15.825 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.089      ;
+; 15.898 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.016      ;
+; 15.898 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.016      ;
+; 15.898 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.016      ;
+; 15.898 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.016      ;
+; 15.898 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.016      ;
+; 15.898 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.016      ;
+; 15.898 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.081     ; 4.016      ;
+; 16.020 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.901      ;
+; 16.020 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.901      ;
+; 16.020 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.901      ;
+; 16.020 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.901      ;
+; 16.020 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.901      ;
+; 16.020 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.901      ;
+; 16.020 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.901      ;
+; 16.054 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.867      ;
+; 16.054 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.867      ;
+; 16.054 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.867      ;
+; 16.054 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.867      ;
+; 16.054 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.867      ;
+; 16.054 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.867      ;
+; 16.054 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.867      ;
+; 16.213 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.726      ;
+; 16.213 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.726      ;
+; 16.213 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.726      ;
+; 16.213 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.726      ;
+; 16.256 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.683      ;
+; 16.256 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.683      ;
+; 16.256 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.683      ;
+; 16.256 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.683      ;
+; 16.325 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.597      ;
+; 16.325 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.597      ;
+; 16.325 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.597      ;
+; 16.325 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.597      ;
+; 16.325 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.597      ;
+; 16.325 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.597      ;
+; 16.325 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.597      ;
+; 16.354 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.585      ;
+; 16.354 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.585      ;
+; 16.354 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.585      ;
+; 16.354 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.056     ; 3.585      ;
+; 16.482 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.440      ;
+; 16.482 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.440      ;
+; 16.482 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.440      ;
+; 16.482 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.440      ;
+; 16.482 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.440      ;
+; 16.482 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.440      ;
+; 16.482 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.440      ;
+; 16.489 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.451      ;
+; 16.489 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.451      ;
+; 16.489 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.451      ;
+; 16.489 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.451      ;
+; 16.562 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.069     ; 3.364      ;
+; 16.562 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.069     ; 3.364      ;
+; 16.562 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.069     ; 3.364      ;
+; 16.562 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.069     ; 3.364      ;
+; 16.562 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.069     ; 3.364      ;
+; 16.562 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.069     ; 3.364      ;
+; 16.562 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.069     ; 3.364      ;
+; 16.581 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.359      ;
+; 16.581 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.359      ;
+; 16.581 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.359      ;
+; 16.581 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.359      ;
+; 16.642 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.298      ;
+; 16.642 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.298      ;
+; 16.642 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.298      ;
+; 16.642 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.298      ;
+; 16.665 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.275      ;
+; 16.665 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.275      ;
+; 16.665 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.275      ;
+; 16.665 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.275      ;
+; 16.682 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.258      ;
+; 16.682 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.258      ;
+; 16.682 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.258      ;
+; 16.682 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.055     ; 3.258      ;
+; 16.735 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.187      ;
+; 16.735 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.187      ;
+; 16.735 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.187      ;
+; 16.735 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.187      ;
+; 16.735 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.187      ;
+; 16.735 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.187      ;
+; 16.735 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.187      ;
+; 16.747 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.175      ;
+; 16.747 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.175      ;
+; 16.747 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.175      ;
+; 16.747 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.175      ;
+; 16.747 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.175      ;
+; 16.747 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.175      ;
+; 16.747 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.175      ;
+; 16.757 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.165      ;
+; 16.757 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.165      ;
+; 16.757 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.165      ;
+; 16.757 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.165      ;
+; 16.757 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.073     ; 3.165      ;
++--------+------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'i_board_clk'                                                                                                                 ;
++-------+------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.357 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.577      ;
+; 0.357 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.577      ;
+; 0.357 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.577      ;
+; 0.357 ; uart_rx:uart_rx|o_data_rx[0]       ; uart_rx:uart_rx|o_data_rx[0]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.577      ;
+; 0.357 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.577      ;
+; 0.360 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[0]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.580      ;
+; 0.372 ; uart_rx:uart_rx|o_data_rx[7]       ; led_controller:led_controller|o_led[7] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.591      ;
+; 0.379 ; uart_rx:uart_rx|o_data_rx[6]       ; led_controller:led_controller|o_led[6] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.598      ;
+; 0.380 ; uart_rx:uart_rx|o_data_rx[3]       ; uart_rx:uart_rx|o_data_rx[4]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.599      ;
+; 0.381 ; uart_rx:uart_rx|o_data_rx[4]       ; uart_rx:uart_rx|o_data_rx[5]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.600      ;
+; 0.381 ; uart_rx:uart_rx|o_data_rx[4]       ; led_controller:led_controller|o_led[4] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.600      ;
+; 0.381 ; uart_rx:uart_rx|o_data_rx[3]       ; led_controller:led_controller|o_led[3] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.600      ;
+; 0.381 ; uart_rx:uart_rx|o_data_rx[2]       ; uart_rx:uart_rx|o_data_rx[3]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.600      ;
+; 0.381 ; uart_rx:uart_rx|o_data_rx[2]       ; led_controller:led_controller|o_led[2] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.600      ;
+; 0.382 ; uart_rx:uart_rx|o_data_rx[6]       ; uart_rx:uart_rx|o_data_rx[7]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.601      ;
+; 0.382 ; uart_rx:uart_rx|o_data_rx[5]       ; uart_rx:uart_rx|o_data_rx[6]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.601      ;
+; 0.382 ; uart_rx:uart_rx|o_data_rx[1]       ; uart_rx:uart_rx|o_data_rx[2]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.601      ;
+; 0.383 ; uart_rx:uart_rx|o_data_rx[5]       ; led_controller:led_controller|o_led[5] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.602      ;
+; 0.383 ; uart_rx:uart_rx|o_data_rx[1]       ; led_controller:led_controller|o_led[1] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 0.602      ;
+; 0.406 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.626      ;
+; 0.423 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.643      ;
+; 0.428 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.648      ;
+; 0.428 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[0]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.648      ;
+; 0.429 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.649      ;
+; 0.573 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.793      ;
+; 0.583 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.803      ;
+; 0.586 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.806      ;
+; 0.699 ; uart_rx:uart_rx|bits_count_rx[3]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 0.919      ;
+; 0.823 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.043      ;
+; 0.857 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[7]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.070      ;
+; 0.861 ; uart_rx:uart_rx|bits_count_rx[3]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.081      ;
+; 0.862 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.082      ;
+; 0.889 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|ticks_count_rx[0]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.109      ;
+; 0.909 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.129      ;
+; 0.943 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.163      ;
+; 0.968 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[7]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.188      ;
+; 0.969 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.189      ;
+; 1.013 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.225      ;
+; 1.029 ; uart_rx:uart_rx|bits_count_rx[3]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.249      ;
+; 1.063 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[0]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.276      ;
+; 1.064 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.277      ;
+; 1.084 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.304      ;
+; 1.097 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.317      ;
+; 1.134 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|ticks_count_rx[5]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.354      ;
+; 1.135 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[2]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.051      ; 1.343      ;
+; 1.137 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.357      ;
+; 1.148 ; uart_rx:uart_rx|ticks_count_rx[6]  ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.368      ;
+; 1.148 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.368      ;
+; 1.148 ; uart_rx:uart_rx|ticks_count_rx[1]  ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.368      ;
+; 1.150 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.370      ;
+; 1.151 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.371      ;
+; 1.151 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.371      ;
+; 1.153 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.373      ;
+; 1.156 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.376      ;
+; 1.162 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.382      ;
+; 1.164 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.384      ;
+; 1.187 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.399      ;
+; 1.193 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.405      ;
+; 1.193 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.413      ;
+; 1.199 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.411      ;
+; 1.200 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[5]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.412      ;
+; 1.224 ; uart_rx:uart_rx|o_data_rx[0]       ; led_controller:led_controller|o_led[0] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.044      ; 1.425      ;
+; 1.225 ; uart_rx:uart_rx|o_data_rx[0]       ; uart_rx:uart_rx|o_data_rx[1]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.044      ; 1.426      ;
+; 1.237 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[5]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.449      ;
+; 1.237 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.449      ;
+; 1.239 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.459      ;
+; 1.241 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.453      ;
+; 1.241 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.453      ;
+; 1.247 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.467      ;
+; 1.247 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.467      ;
+; 1.247 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[0]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.467      ;
+; 1.247 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.467      ;
+; 1.248 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.460      ;
+; 1.250 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.462      ;
+; 1.251 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.463      ;
+; 1.254 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.466      ;
+; 1.254 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.474      ;
+; 1.275 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 1.494      ;
+; 1.276 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.496      ;
+; 1.288 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.500      ;
+; 1.289 ; uart_rx:uart_rx|ticks_count_rx[6]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.064      ; 1.510      ;
+; 1.294 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.506      ;
+; 1.297 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 1.516      ;
+; 1.298 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.510      ;
+; 1.300 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.512      ;
+; 1.306 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 1.525      ;
+; 1.307 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.527      ;
+; 1.314 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.534      ;
+; 1.317 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.529      ;
+; 1.372 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 1.591      ;
+; 1.372 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.064      ; 1.593      ;
+; 1.388 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 1.607      ;
+; 1.393 ; uart_rx:uart_rx|ticks_count_rx[6]  ; uart_rx:uart_rx|ticks_count_rx[7]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.064      ; 1.614      ;
+; 1.394 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 1.613      ;
+; 1.400 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.620      ;
+; 1.403 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 1.622      ;
+; 1.404 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.617      ;
+; 1.405 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[0]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.618      ;
+; 1.409 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.063      ; 1.629      ;
+; 1.419 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.062      ; 1.638      ;
++-------+------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                          ;
++------------+-----------------+-------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note                                                          ;
++------------+-----------------+-------------+---------------------------------------------------------------+
+; 262.12 MHz ; 250.0 MHz       ; i_board_clk ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+-------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------+
+; Slow 1200mV 0C Model Setup Summary   ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; i_board_clk ; 16.185 ; 0.000         ;
++-------------+--------+---------------+
+
+
++-------------------------------------+
+; Slow 1200mV 0C Model Hold Summary   ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; i_board_clk ; 0.311 ; 0.000         ;
++-------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------------+-------+----------------------------+
+; Clock       ; Slack ; End Point TNS              ;
++-------------+-------+----------------------------+
+; i_board_clk ; 9.597 ; 0.000                      ;
++-------------+-------+----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'i_board_clk'                                                                                                            ;
++--------+------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 16.185 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.736      ;
+; 16.185 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.736      ;
+; 16.185 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.736      ;
+; 16.185 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.736      ;
+; 16.185 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.736      ;
+; 16.185 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.736      ;
+; 16.185 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.736      ;
+; 16.354 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.567      ;
+; 16.354 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.567      ;
+; 16.354 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.567      ;
+; 16.354 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.567      ;
+; 16.354 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.567      ;
+; 16.354 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.567      ;
+; 16.354 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.074     ; 3.567      ;
+; 16.367 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.562      ;
+; 16.367 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.562      ;
+; 16.367 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.562      ;
+; 16.367 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.562      ;
+; 16.367 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.562      ;
+; 16.367 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.562      ;
+; 16.367 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.562      ;
+; 16.394 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.535      ;
+; 16.394 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.535      ;
+; 16.394 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.535      ;
+; 16.394 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.535      ;
+; 16.394 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.535      ;
+; 16.394 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.535      ;
+; 16.394 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.066     ; 3.535      ;
+; 16.582 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.365      ;
+; 16.582 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.365      ;
+; 16.582 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.365      ;
+; 16.582 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.365      ;
+; 16.597 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.350      ;
+; 16.597 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.350      ;
+; 16.597 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.350      ;
+; 16.597 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.350      ;
+; 16.692 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.255      ;
+; 16.692 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.255      ;
+; 16.692 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.255      ;
+; 16.692 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.048     ; 3.255      ;
+; 16.732 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.198      ;
+; 16.732 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.198      ;
+; 16.732 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.198      ;
+; 16.732 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.198      ;
+; 16.732 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.198      ;
+; 16.732 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.198      ;
+; 16.732 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.198      ;
+; 16.860 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 3.088      ;
+; 16.860 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 3.088      ;
+; 16.860 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 3.088      ;
+; 16.860 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 3.088      ;
+; 16.867 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.063      ;
+; 16.867 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.063      ;
+; 16.867 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.063      ;
+; 16.867 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.063      ;
+; 16.867 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.063      ;
+; 16.867 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.063      ;
+; 16.867 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 3.063      ;
+; 16.915 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.061     ; 3.019      ;
+; 16.915 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.061     ; 3.019      ;
+; 16.915 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.061     ; 3.019      ;
+; 16.915 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.061     ; 3.019      ;
+; 16.915 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.061     ; 3.019      ;
+; 16.915 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.061     ; 3.019      ;
+; 16.915 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.061     ; 3.019      ;
+; 16.944 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 3.004      ;
+; 16.944 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 3.004      ;
+; 16.944 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 3.004      ;
+; 16.944 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 3.004      ;
+; 16.974 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.974      ;
+; 16.974 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.974      ;
+; 16.974 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.974      ;
+; 16.974 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.974      ;
+; 16.994 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.954      ;
+; 16.994 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.954      ;
+; 16.994 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.954      ;
+; 16.994 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.954      ;
+; 17.018 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.912      ;
+; 17.018 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.912      ;
+; 17.018 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.912      ;
+; 17.018 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.912      ;
+; 17.018 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.912      ;
+; 17.018 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.912      ;
+; 17.018 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.912      ;
+; 17.028 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.902      ;
+; 17.028 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.902      ;
+; 17.028 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.902      ;
+; 17.028 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.902      ;
+; 17.028 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.902      ;
+; 17.028 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.902      ;
+; 17.028 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.065     ; 2.902      ;
+; 17.029 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.919      ;
+; 17.029 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.919      ;
+; 17.029 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.919      ;
+; 17.029 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.919      ;
+; 17.047 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.901      ;
+; 17.047 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.901      ;
+; 17.047 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.901      ;
+; 17.047 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.047     ; 2.901      ;
+; 17.054 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.043     ; 2.898      ;
++--------+------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'i_board_clk'                                                                                                                  ;
++-------+------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.311 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.511      ;
+; 0.311 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.511      ;
+; 0.311 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.511      ;
+; 0.311 ; uart_rx:uart_rx|o_data_rx[0]       ; uart_rx:uart_rx|o_data_rx[0]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.511      ;
+; 0.311 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.511      ;
+; 0.319 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[0]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.519      ;
+; 0.338 ; uart_rx:uart_rx|o_data_rx[7]       ; led_controller:led_controller|o_led[7] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.537      ;
+; 0.344 ; uart_rx:uart_rx|o_data_rx[6]       ; led_controller:led_controller|o_led[6] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.543      ;
+; 0.345 ; uart_rx:uart_rx|o_data_rx[3]       ; uart_rx:uart_rx|o_data_rx[4]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.544      ;
+; 0.346 ; uart_rx:uart_rx|o_data_rx[4]       ; uart_rx:uart_rx|o_data_rx[5]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.545      ;
+; 0.346 ; uart_rx:uart_rx|o_data_rx[4]       ; led_controller:led_controller|o_led[4] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.545      ;
+; 0.346 ; uart_rx:uart_rx|o_data_rx[3]       ; led_controller:led_controller|o_led[3] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.545      ;
+; 0.346 ; uart_rx:uart_rx|o_data_rx[2]       ; uart_rx:uart_rx|o_data_rx[3]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.545      ;
+; 0.346 ; uart_rx:uart_rx|o_data_rx[2]       ; led_controller:led_controller|o_led[2] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.545      ;
+; 0.347 ; uart_rx:uart_rx|o_data_rx[6]       ; uart_rx:uart_rx|o_data_rx[7]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.546      ;
+; 0.347 ; uart_rx:uart_rx|o_data_rx[5]       ; uart_rx:uart_rx|o_data_rx[6]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.546      ;
+; 0.347 ; uart_rx:uart_rx|o_data_rx[1]       ; uart_rx:uart_rx|o_data_rx[2]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.546      ;
+; 0.348 ; uart_rx:uart_rx|o_data_rx[5]       ; led_controller:led_controller|o_led[5] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.547      ;
+; 0.348 ; uart_rx:uart_rx|o_data_rx[1]       ; led_controller:led_controller|o_led[1] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.547      ;
+; 0.362 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.562      ;
+; 0.381 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.581      ;
+; 0.386 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.586      ;
+; 0.386 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.586      ;
+; 0.386 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[0]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.586      ;
+; 0.515 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.715      ;
+; 0.519 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.719      ;
+; 0.521 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.721      ;
+; 0.630 ; uart_rx:uart_rx|bits_count_rx[3]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.830      ;
+; 0.737 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.937      ;
+; 0.779 ; uart_rx:uart_rx|bits_count_rx[3]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 0.979      ;
+; 0.780 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.979      ;
+; 0.784 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[7]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.048      ; 0.976      ;
+; 0.798 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|ticks_count_rx[0]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 0.997      ;
+; 0.810 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.010      ;
+; 0.844 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.044      ;
+; 0.873 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.073      ;
+; 0.875 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[7]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.074      ;
+; 0.942 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.133      ;
+; 0.943 ; uart_rx:uart_rx|bits_count_rx[3]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.143      ;
+; 0.975 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[0]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.048      ; 1.167      ;
+; 0.976 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.176      ;
+; 0.976 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.048      ; 1.168      ;
+; 0.982 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.182      ;
+; 1.027 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.226      ;
+; 1.028 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.227      ;
+; 1.028 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.227      ;
+; 1.029 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.228      ;
+; 1.029 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.228      ;
+; 1.030 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.230      ;
+; 1.031 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.230      ;
+; 1.039 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|ticks_count_rx[5]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.238      ;
+; 1.040 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[2]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.043      ; 1.227      ;
+; 1.053 ; uart_rx:uart_rx|ticks_count_rx[1]  ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.252      ;
+; 1.055 ; uart_rx:uart_rx|ticks_count_rx[6]  ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.254      ;
+; 1.069 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.268      ;
+; 1.070 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.269      ;
+; 1.078 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.269      ;
+; 1.082 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.273      ;
+; 1.087 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.278      ;
+; 1.088 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[5]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.279      ;
+; 1.098 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.297      ;
+; 1.114 ; uart_rx:uart_rx|o_data_rx[0]       ; led_controller:led_controller|o_led[0] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 1.295      ;
+; 1.117 ; uart_rx:uart_rx|o_data_rx[0]       ; uart_rx:uart_rx|o_data_rx[1]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 1.298      ;
+; 1.123 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.323      ;
+; 1.126 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[5]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.317      ;
+; 1.126 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.317      ;
+; 1.128 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.328      ;
+; 1.128 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.328      ;
+; 1.128 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[0]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.328      ;
+; 1.128 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.328      ;
+; 1.130 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.321      ;
+; 1.130 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.321      ;
+; 1.135 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.335      ;
+; 1.136 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.054      ; 1.334      ;
+; 1.137 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.337      ;
+; 1.139 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.330      ;
+; 1.141 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.332      ;
+; 1.142 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.333      ;
+; 1.144 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.335      ;
+; 1.155 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.054      ; 1.353      ;
+; 1.168 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.359      ;
+; 1.170 ; uart_rx:uart_rx|ticks_count_rx[6]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.370      ;
+; 1.174 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.365      ;
+; 1.177 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.368      ;
+; 1.178 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.369      ;
+; 1.181 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.054      ; 1.379      ;
+; 1.190 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.047      ; 1.381      ;
+; 1.201 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.400      ;
+; 1.206 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.405      ;
+; 1.223 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.054      ; 1.421      ;
+; 1.234 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.054      ; 1.432      ;
+; 1.240 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.440      ;
+; 1.255 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.054      ; 1.453      ;
+; 1.262 ; uart_rx:uart_rx|ticks_count_rx[6]  ; uart_rx:uart_rx|ticks_count_rx[7]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.056      ; 1.462      ;
+; 1.268 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.054      ; 1.466      ;
+; 1.278 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.054      ; 1.476      ;
+; 1.280 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.479      ;
+; 1.284 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.483      ;
+; 1.288 ; uart_rx:uart_rx|ticks_count_rx[1]  ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.487      ;
+; 1.288 ; uart_rx:uart_rx|ticks_count_rx[1]  ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.055      ; 1.487      ;
++-------+------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------+
+; Fast 1200mV 0C Model Setup Summary   ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; i_board_clk ; 17.622 ; 0.000         ;
++-------------+--------+---------------+
+
+
++-------------------------------------+
+; Fast 1200mV 0C Model Hold Summary   ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; i_board_clk ; 0.186 ; 0.000         ;
++-------------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------------+-------+----------------------------+
+; Clock       ; Slack ; End Point TNS              ;
++-------------+-------+----------------------------+
+; i_board_clk ; 9.272 ; 0.000                      ;
++-------------+-------+----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'i_board_clk'                                                                                                            ;
++--------+------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 17.622 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.314      ;
+; 17.622 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.314      ;
+; 17.622 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.314      ;
+; 17.622 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.314      ;
+; 17.622 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.314      ;
+; 17.622 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.314      ;
+; 17.622 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.314      ;
+; 17.629 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.307      ;
+; 17.629 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.307      ;
+; 17.629 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.307      ;
+; 17.629 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.307      ;
+; 17.629 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.307      ;
+; 17.629 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.307      ;
+; 17.629 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.051     ; 2.307      ;
+; 17.744 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.199      ;
+; 17.744 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.199      ;
+; 17.744 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.199      ;
+; 17.744 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.199      ;
+; 17.744 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.199      ;
+; 17.744 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.199      ;
+; 17.744 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.199      ;
+; 17.765 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.178      ;
+; 17.765 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.178      ;
+; 17.765 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.178      ;
+; 17.765 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.178      ;
+; 17.765 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.178      ;
+; 17.765 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.178      ;
+; 17.765 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.044     ; 2.178      ;
+; 17.822 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.135      ;
+; 17.822 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.135      ;
+; 17.822 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.135      ;
+; 17.822 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.135      ;
+; 17.894 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 2.051      ;
+; 17.894 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 2.051      ;
+; 17.894 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 2.051      ;
+; 17.894 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 2.051      ;
+; 17.894 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 2.051      ;
+; 17.894 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 2.051      ;
+; 17.894 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 2.051      ;
+; 17.908 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.049      ;
+; 17.908 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.049      ;
+; 17.908 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.049      ;
+; 17.908 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.049      ;
+; 17.913 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.044      ;
+; 17.913 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.044      ;
+; 17.913 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.044      ;
+; 17.913 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 2.044      ;
+; 17.986 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.959      ;
+; 17.986 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.959      ;
+; 17.986 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.959      ;
+; 17.986 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.959      ;
+; 17.986 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.959      ;
+; 17.986 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.959      ;
+; 17.986 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.959      ;
+; 18.014 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.945      ;
+; 18.014 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.945      ;
+; 18.014 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.945      ;
+; 18.014 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.945      ;
+; 18.020 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.039     ; 1.928      ;
+; 18.020 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.039     ; 1.928      ;
+; 18.020 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.039     ; 1.928      ;
+; 18.020 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.039     ; 1.928      ;
+; 18.020 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.039     ; 1.928      ;
+; 18.020 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.039     ; 1.928      ;
+; 18.020 ; uart_rx:uart_rx|ticks_count_rx[2]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.039     ; 1.928      ;
+; 18.068 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.891      ;
+; 18.068 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.891      ;
+; 18.068 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.891      ;
+; 18.068 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.891      ;
+; 18.106 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.853      ;
+; 18.106 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.853      ;
+; 18.106 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.853      ;
+; 18.106 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.853      ;
+; 18.124 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.835      ;
+; 18.124 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.835      ;
+; 18.124 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.835      ;
+; 18.124 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.835      ;
+; 18.128 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[3] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.831      ;
+; 18.128 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[2] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.831      ;
+; 18.128 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[0] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.831      ;
+; 18.128 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|bits_count_rx[1] ; i_board_clk  ; i_board_clk ; 20.000       ; -0.028     ; 1.831      ;
+; 18.133 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.812      ;
+; 18.133 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.812      ;
+; 18.133 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.812      ;
+; 18.133 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.812      ;
+; 18.133 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.812      ;
+; 18.133 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.812      ;
+; 18.133 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.812      ;
+; 18.134 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|state_rx[1]      ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 1.823      ;
+; 18.140 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|state_rx[0]      ; i_board_clk  ; i_board_clk ; 20.000       ; -0.030     ; 1.817      ;
+; 18.145 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.800      ;
+; 18.145 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[6]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.800      ;
+; 18.145 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[5]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.800      ;
+; 18.145 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[4]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.800      ;
+; 18.145 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[3]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.800      ;
+; 18.145 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[2]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.800      ;
+; 18.145 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|o_data_rx[1]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.800      ;
+; 18.155 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|o_data_rx[0]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.037     ; 1.795      ;
+; 18.162 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|o_data_rx[0]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.037     ; 1.788      ;
+; 18.171 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|o_data_rx[7]     ; i_board_clk  ; i_board_clk ; 20.000       ; -0.042     ; 1.774      ;
++--------+------------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'i_board_clk'                                                                                                                  ;
++-------+------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.186 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; uart_rx:uart_rx|o_data_rx[0]       ; uart_rx:uart_rx|o_data_rx[0]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.307      ;
+; 0.192 ; uart_rx:uart_rx|o_data_rx[7]       ; led_controller:led_controller|o_led[7] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.313      ;
+; 0.193 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[0]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.314      ;
+; 0.196 ; uart_rx:uart_rx|o_data_rx[6]       ; led_controller:led_controller|o_led[6] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.317      ;
+; 0.196 ; uart_rx:uart_rx|o_data_rx[3]       ; led_controller:led_controller|o_led[3] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.317      ;
+; 0.197 ; uart_rx:uart_rx|o_data_rx[3]       ; uart_rx:uart_rx|o_data_rx[4]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.318      ;
+; 0.197 ; uart_rx:uart_rx|o_data_rx[2]       ; uart_rx:uart_rx|o_data_rx[3]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.318      ;
+; 0.197 ; uart_rx:uart_rx|o_data_rx[2]       ; led_controller:led_controller|o_led[2] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.318      ;
+; 0.198 ; uart_rx:uart_rx|o_data_rx[6]       ; uart_rx:uart_rx|o_data_rx[7]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.319      ;
+; 0.198 ; uart_rx:uart_rx|o_data_rx[5]       ; uart_rx:uart_rx|o_data_rx[6]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.319      ;
+; 0.198 ; uart_rx:uart_rx|o_data_rx[4]       ; led_controller:led_controller|o_led[4] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.319      ;
+; 0.199 ; uart_rx:uart_rx|o_data_rx[5]       ; led_controller:led_controller|o_led[5] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.320      ;
+; 0.199 ; uart_rx:uart_rx|o_data_rx[4]       ; uart_rx:uart_rx|o_data_rx[5]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.320      ;
+; 0.199 ; uart_rx:uart_rx|o_data_rx[1]       ; uart_rx:uart_rx|o_data_rx[2]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.320      ;
+; 0.200 ; uart_rx:uart_rx|o_data_rx[1]       ; led_controller:led_controller|o_led[1] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.321      ;
+; 0.215 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.336      ;
+; 0.222 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.343      ;
+; 0.226 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[0]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.347      ;
+; 0.229 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.350      ;
+; 0.229 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.350      ;
+; 0.312 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.433      ;
+; 0.314 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.435      ;
+; 0.314 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.435      ;
+; 0.372 ; uart_rx:uart_rx|bits_count_rx[3]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.493      ;
+; 0.444 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.565      ;
+; 0.457 ; uart_rx:uart_rx|bits_count_rx[3]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.578      ;
+; 0.459 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.580      ;
+; 0.464 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[7]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.030      ; 0.578      ;
+; 0.484 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|ticks_count_rx[0]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.605      ;
+; 0.489 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.610      ;
+; 0.511 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.632      ;
+; 0.518 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.639      ;
+; 0.519 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[7]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.640      ;
+; 0.544 ; uart_rx:uart_rx|bits_count_rx[3]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.665      ;
+; 0.552 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.664      ;
+; 0.580 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[0]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.030      ; 0.694      ;
+; 0.581 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.030      ; 0.695      ;
+; 0.585 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.706      ;
+; 0.589 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.710      ;
+; 0.592 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|ticks_count_rx[5]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.712      ;
+; 0.601 ; uart_rx:uart_rx|ticks_count_rx[6]  ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.721      ;
+; 0.601 ; uart_rx:uart_rx|ticks_count_rx[1]  ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.721      ;
+; 0.606 ; uart_rx:uart_rx|ticks_count_rx[9]  ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.726      ;
+; 0.608 ; uart_rx:uart_rx|ticks_count_rx[4]  ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.728      ;
+; 0.609 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.730      ;
+; 0.620 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.740      ;
+; 0.621 ; uart_rx:uart_rx|ticks_count_rx[10] ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.741      ;
+; 0.622 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[2]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.025      ; 0.731      ;
+; 0.624 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.744      ;
+; 0.624 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.744      ;
+; 0.624 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.744      ;
+; 0.625 ; uart_rx:uart_rx|ticks_count_rx[12] ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.745      ;
+; 0.638 ; uart_rx:uart_rx|bits_count_rx[2]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.759      ;
+; 0.646 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.758      ;
+; 0.648 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.760      ;
+; 0.656 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.768      ;
+; 0.657 ; uart_rx:uart_rx|o_data_rx[0]       ; led_controller:led_controller|o_led[0] ; i_board_clk  ; i_board_clk ; 0.000        ; 0.023      ; 0.764      ;
+; 0.657 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[5]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.769      ;
+; 0.658 ; uart_rx:uart_rx|o_data_rx[0]       ; uart_rx:uart_rx|o_data_rx[1]           ; i_board_clk  ; i_board_clk ; 0.000        ; 0.023      ; 0.765      ;
+; 0.661 ; uart_rx:uart_rx|bits_count_rx[0]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.782      ;
+; 0.669 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|state_rx[0]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.790      ;
+; 0.676 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[5]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.788      ;
+; 0.677 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.789      ;
+; 0.682 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[3]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.803      ;
+; 0.682 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[2]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.803      ;
+; 0.682 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[0]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.803      ;
+; 0.682 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|bits_count_rx[1]       ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.803      ;
+; 0.682 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.794      ;
+; 0.683 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.795      ;
+; 0.683 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.035      ; 0.802      ;
+; 0.683 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.795      ;
+; 0.684 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.796      ;
+; 0.684 ; uart_rx:uart_rx|ticks_count_rx[11] ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.804      ;
+; 0.686 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.798      ;
+; 0.687 ; uart_rx:uart_rx|ticks_count_rx[6]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.038      ; 0.809      ;
+; 0.689 ; uart_rx:uart_rx|state_rx[0]        ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.801      ;
+; 0.694 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|ticks_count_rx[1]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.035      ; 0.813      ;
+; 0.695 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.815      ;
+; 0.697 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.035      ; 0.816      ;
+; 0.706 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.818      ;
+; 0.709 ; uart_rx:uart_rx|bits_count_rx[1]   ; uart_rx:uart_rx|state_rx[1]            ; i_board_clk  ; i_board_clk ; 0.000        ; 0.037      ; 0.830      ;
+; 0.711 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.823      ;
+; 0.713 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.825      ;
+; 0.717 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.829      ;
+; 0.722 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[3]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.028      ; 0.834      ;
+; 0.732 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.038      ; 0.854      ;
+; 0.738 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[9]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.035      ; 0.857      ;
+; 0.740 ; uart_rx:uart_rx|ticks_count_rx[3]  ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.860      ;
+; 0.741 ; uart_rx:uart_rx|ticks_count_rx[5]  ; uart_rx:uart_rx|ticks_count_rx[6]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.036      ; 0.861      ;
+; 0.743 ; uart_rx:uart_rx|ticks_count_rx[6]  ; uart_rx:uart_rx|ticks_count_rx[7]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.038      ; 0.865      ;
+; 0.750 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[11]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.035      ; 0.869      ;
+; 0.752 ; uart_rx:uart_rx|ticks_count_rx[7]  ; uart_rx:uart_rx|ticks_count_rx[10]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.035      ; 0.871      ;
+; 0.754 ; uart_rx:uart_rx|ticks_count_rx[0]  ; uart_rx:uart_rx|ticks_count_rx[4]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.035      ; 0.873      ;
+; 0.763 ; uart_rx:uart_rx|ticks_count_rx[8]  ; uart_rx:uart_rx|ticks_count_rx[12]     ; i_board_clk  ; i_board_clk ; 0.000        ; 0.035      ; 0.882      ;
+; 0.764 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[8]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.030      ; 0.878      ;
+; 0.764 ; uart_rx:uart_rx|state_rx[1]        ; uart_rx:uart_rx|ticks_count_rx[0]      ; i_board_clk  ; i_board_clk ; 0.000        ; 0.030      ; 0.878      ;
++-------+------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 15.825 ; 0.186 ; N/A      ; N/A     ; 9.272               ;
+;  i_board_clk     ; 15.825 ; 0.186 ; N/A      ; N/A     ; 9.272               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  i_board_clk     ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; o_led[0]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_led[1]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_led[2]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_led[3]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_led[4]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_led[5]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_led[6]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_led[7]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; i_board_clk             ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; i_data_rx               ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_DATA0~          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; o_led[0]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.54e-08 V                   ; 3.09 V              ; -0.0119 V           ; 0.277 V                              ; 0.297 V                              ; 4.54e-09 s                  ; 3.32e-09 s                  ; No                         ; No                         ; 3.08 V                      ; 1.54e-08 V                  ; 3.09 V             ; -0.0119 V          ; 0.277 V                             ; 0.297 V                             ; 4.54e-09 s                 ; 3.32e-09 s                 ; No                        ; No                        ;
+; o_led[1]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.54e-08 V                   ; 3.16 V              ; -0.11 V             ; 0.302 V                              ; 0.22 V                               ; 4.82e-10 s                  ; 4.27e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.54e-08 V                  ; 3.16 V             ; -0.11 V            ; 0.302 V                             ; 0.22 V                              ; 4.82e-10 s                 ; 4.27e-10 s                 ; Yes                       ; No                        ;
+; o_led[2]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.54e-08 V                   ; 3.09 V              ; -0.0119 V           ; 0.277 V                              ; 0.297 V                              ; 4.54e-09 s                  ; 3.32e-09 s                  ; No                         ; No                         ; 3.08 V                      ; 1.54e-08 V                  ; 3.09 V             ; -0.0119 V          ; 0.277 V                             ; 0.297 V                             ; 4.54e-09 s                 ; 3.32e-09 s                 ; No                        ; No                        ;
+; o_led[3]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.54e-08 V                   ; 3.14 V              ; -0.074 V            ; 0.343 V                              ; 0.194 V                              ; 7.35e-10 s                  ; 6.36e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 1.54e-08 V                  ; 3.14 V             ; -0.074 V           ; 0.343 V                             ; 0.194 V                             ; 7.35e-10 s                 ; 6.36e-10 s                 ; No                        ; No                        ;
+; o_led[4]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; o_led[5]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; o_led[6]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; o_led[7]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.05e-09 V                   ; 3.21 V              ; -0.181 V            ; 0.16 V                               ; 0.253 V                              ; 2.77e-10 s                  ; 2.32e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.05e-09 V                  ; 3.21 V             ; -0.181 V           ; 0.16 V                              ; 0.253 V                             ; 2.77e-10 s                 ; 2.32e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.61e-09 V                   ; 2.38 V              ; -0.00274 V          ; 0.141 V                              ; 0.006 V                              ; 4.7e-10 s                   ; 6.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.61e-09 V                  ; 2.38 V             ; -0.00274 V         ; 0.141 V                             ; 0.006 V                             ; 4.7e-10 s                  ; 6.02e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; o_led[0]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-06 V                      ; 3.08 V              ; -0.00666 V          ; 0.298 V                              ; 0.277 V                              ; 5.29e-09 s                  ; 4.2e-09 s                   ; Yes                        ; No                         ; 3.08 V                      ; 2e-06 V                     ; 3.08 V             ; -0.00666 V         ; 0.298 V                             ; 0.277 V                             ; 5.29e-09 s                 ; 4.2e-09 s                  ; Yes                       ; No                        ;
+; o_led[1]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-06 V                      ; 3.13 V              ; -0.0781 V           ; 0.202 V                              ; 0.359 V                              ; 6.54e-10 s                  ; 5e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 2e-06 V                     ; 3.13 V             ; -0.0781 V          ; 0.202 V                             ; 0.359 V                             ; 6.54e-10 s                 ; 5e-10 s                    ; No                        ; No                        ;
+; o_led[2]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-06 V                      ; 3.08 V              ; -0.00666 V          ; 0.298 V                              ; 0.277 V                              ; 5.29e-09 s                  ; 4.2e-09 s                   ; Yes                        ; No                         ; 3.08 V                      ; 2e-06 V                     ; 3.08 V             ; -0.00666 V         ; 0.298 V                             ; 0.277 V                             ; 5.29e-09 s                 ; 4.2e-09 s                  ; Yes                       ; No                        ;
+; o_led[3]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-06 V                      ; 3.12 V              ; -0.0547 V           ; 0.276 V                              ; 0.181 V                              ; 9.17e-10 s                  ; 8.31e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2e-06 V                     ; 3.12 V             ; -0.0547 V          ; 0.276 V                             ; 0.181 V                             ; 9.17e-10 s                 ; 8.31e-10 s                 ; Yes                       ; No                        ;
+; o_led[4]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; o_led[5]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; o_led[6]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; o_led[7]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.02e-06 V                   ; 3.14 V              ; -0.123 V            ; 0.134 V                              ; 0.323 V                              ; 3.02e-10 s                  ; 2.85e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.02e-06 V                  ; 3.14 V             ; -0.123 V           ; 0.134 V                             ; 0.323 V                             ; 3.02e-10 s                 ; 2.85e-10 s                 ; Yes                       ; No                        ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.00643 V          ; 0.081 V                              ; 0.031 V                              ; 5.31e-10 s                  ; 7.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.00643 V         ; 0.081 V                             ; 0.031 V                             ; 5.31e-10 s                 ; 7.59e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; o_led[0]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.48 V              ; -0.0162 V           ; 0.354 V                              ; 0.317 V                              ; 3.88e-09 s                  ; 3.06e-09 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.48 V             ; -0.0162 V          ; 0.354 V                             ; 0.317 V                             ; 3.88e-09 s                 ; 3.06e-09 s                 ; No                        ; No                        ;
+; o_led[1]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.6 V               ; -0.127 V            ; 0.302 V                              ; 0.21 V                               ; 4.55e-10 s                  ; 4.11e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.6 V              ; -0.127 V           ; 0.302 V                             ; 0.21 V                              ; 4.55e-10 s                 ; 4.11e-10 s                 ; No                        ; No                        ;
+; o_led[2]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.48 V              ; -0.0162 V           ; 0.354 V                              ; 0.317 V                              ; 3.88e-09 s                  ; 3.06e-09 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.48 V             ; -0.0162 V          ; 0.354 V                             ; 0.317 V                             ; 3.88e-09 s                 ; 3.06e-09 s                 ; No                        ; No                        ;
+; o_led[3]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.57 V              ; -0.0855 V           ; 0.315 V                              ; 0.175 V                              ; 6.79e-10 s                  ; 6.15e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.57 V             ; -0.0855 V          ; 0.315 V                             ; 0.175 V                             ; 6.79e-10 s                 ; 6.15e-10 s                 ; No                        ; No                        ;
+; o_led[4]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; o_led[5]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; o_led[6]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; o_led[7]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 6.54e-08 V                   ; 3.66 V              ; -0.26 V             ; 0.41 V                               ; 0.32 V                               ; 1.57e-10 s                  ; 2.15e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 6.54e-08 V                  ; 3.66 V             ; -0.26 V            ; 0.41 V                              ; 0.32 V                              ; 1.57e-10 s                 ; 2.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; i_board_clk ; i_board_clk ; 451      ; 0        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; i_board_clk ; i_board_clk ; 451      ; 0        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------+
+; Clock Status Summary                           ;
++-------------+-------------+------+-------------+
+; Target      ; Clock       ; Type ; Status      ;
++-------------+-------------+------+-------------+
+; i_board_clk ; i_board_clk ; Base ; Constrained ;
++-------------+-------------+------+-------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Sep 01 11:16:45 2022
+Info: Command: quartus_sta UART_rx -c UART_rx
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'UART_rx.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 15.825
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    15.825               0.000 i_board_clk 
+Info (332146): Worst-case hold slack is 0.357
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.357               0.000 i_board_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.597
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.597               0.000 i_board_clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 16.185
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    16.185               0.000 i_board_clk 
+Info (332146): Worst-case hold slack is 0.311
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.311               0.000 i_board_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.597
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.597               0.000 i_board_clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 17.622
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    17.622               0.000 i_board_clk 
+Info (332146): Worst-case hold slack is 0.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.186               0.000 i_board_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.272
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.272               0.000 i_board_clk 
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4773 megabytes
+    Info: Processing ended: Thu Sep 01 11:16:47 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
