@@ -17,3 +17,5 @@ Instruction:
 
 6.Run UART_rx.m
 
+PROJECT USES PIN_D3 AS UART INPUT
+
